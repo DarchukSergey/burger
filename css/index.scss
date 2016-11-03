@@ -1,0 +1,38 @@
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+
+	body {
+	    margin: 0;
+		
+		footer, header, nav, section {
+		    display: block;
+		}
+
+		a {
+		    background-color: transparent;
+		}
+		a:active, a:hover {
+		    outline-width: 0;
+		}
+
+		h1 {
+		    font-size: 2em;
+		    margin: 0.67em 0;
+		}
+		img {
+		    border-style: none;
+		}
+		button, input,textarea {
+		    font: inherit;
+		    margin: 0;
+		}
+		button, input {
+		    overflow: visible;
+		}
+		button{
+		    text-transform: none;
+		}
+	}
+}
