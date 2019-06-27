@@ -1,0 +1,117 @@
+.map { 
+  position: relative;
+}
+
+.map__container {
+  height: 100%;
+}
+
+.map__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.footer {
+  height: 58px;
+  width: 100%;
+  background-color: #111111;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  font-size: 14px;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  color: #fff;
+  white-space: nowrap;
+
+  @include tablets {
+    height: 60px;
+  }
+
+  @include phones {
+    height: 14.4vh;
+    padding: 1.5vh 0 0 0;
+  }
+}
+
+.footer__container {
+  flex-direction: row;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  flex-basis: 50%;
+
+  @include tablets {
+    padding: 0 1.7%;
+  }
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.footer__adress {
+  margin-top: -1px;
+}
+
+.footer__phone {
+  display: flex;
+  margin-top: 5px;
+
+  @include tablets {
+    margin-top: 3px;
+  }
+}
+
+.phone__pic {
+  fill: $orange;
+  width: 11px;
+  height: 11px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.phone__text {
+  font-weight: 900;
+  color: $orange;
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-end;
+
+  @include phones {
+    margin-bottom: 0.5vh;
+    margin-right: 22px;
+  }
+}
+
+.socials__img {
+  fill: #585858;
+  max-width: 20px;
+  max-height: 20px;
+  margin-left: 20px;
+
+  &:hover {
+    transition: 0.5s;
+    fill: #fff;
+  }
+}

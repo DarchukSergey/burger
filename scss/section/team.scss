@@ -1,0 +1,222 @@
+.team {
+  background-image: url('../img/bg/team-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  position: relative;
+}
+
+.team__container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  width: 49.3%;
+
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: rgba(#2f3234, .93);
+
+  @include tablets {
+    width: 100%;
+    align-items: center;
+    padding-top: 9.5vh;
+  }
+
+  @include phones {
+    justify-content: flex-start;
+    padding: 0;
+  }
+}
+
+.team__content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-top: 12%;
+  align-items: center;
+  max-width: 75%;
+
+  @include tablets {
+    margin: 0;
+  }
+
+  @include phones {
+    justify-content: space-between;
+    margin-top: 6.4vh;
+    height: 71.5vh;
+  }
+}
+
+.section__title--team {
+  @include phones {
+    margin-bottom: 0;
+  }
+}
+
+.team__list {
+  margin-top: -0.5vh;
+  margin-left: 27%;
+  display: flex;
+  flex-direction: column;
+
+  @include tablets {
+    margin: 0;
+    margin-top: 4.3vh;
+    margin-left: 2.5%;
+    text-align: center;
+  }
+
+  @include phones {
+    margin-top: 0;
+    height: 53vh;
+    justify-content: space-between;
+  }
+}
+
+.team__item-title {
+  display: inline-flex;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Gagalin';
+  font-size: 14px;
+  position: relative;
+  margin-bottom: 4.5vh;
+  flex: 0 0 auto;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 6px solid $yellow;
+    border-bottom: 0 solid transparent;
+    left: -18px;
+    top: 8px;
+    transform: rotate(0deg);
+  }
+
+  @include tablets {
+    font-size: 25px;
+    margin-bottom: 2.2vh;
+
+    &:before {
+      top: 16px;
+    }
+  }
+
+  @include phones {
+    font-size: 24px;
+    margin-bottom: 1vh;
+
+    &:before {
+    left: -16px;
+    }
+  }
+}
+
+.item-content {
+  height: 0;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.item-content__wrapper {
+  display: flex;
+  height: 100%;
+  flex: 0 0 auto;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.team__item--active {
+
+  .team__item-title {
+    color: $yellow;
+
+      &:before {
+        transform: rotate(180deg);
+        transition: .3s;
+      }
+
+    @include tablets {
+      &:before {
+        top: 12px;
+      }
+    }
+  }
+
+  .item-content {
+    height: 114px;
+    margin-top: -2.2vh;
+    margin-bottom: 4vh;
+
+    @include tablets {
+      height: 208px; 
+      margin-top: -1vh;
+      margin-bottom: 1.5vh;
+    }
+
+    @include phones {
+      height: 225px;
+      margin-top: -2vh;
+      margin-bottom: 0.8vh;
+    }
+  }
+
+}
+
+.item-content__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+
+  @include tablets {
+    margin-bottom: 2vh;
+  }
+
+  @include phones {
+    margin-top: 2.3vh;
+    margin-bottom: 2.2vh;
+  }
+
+}
+
+.item-content__desc {
+  width: 230px;
+  max-width: 60%;
+  color: #fff;
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: -0.3vh;
+
+  @include tablets {
+    width: 75%;
+    max-width: 90%;
+    margin: -0.5vh 4% -0.2vh 0;
+  }
+
+  @include phones {
+    margin-top: 0;
+    margin-bottom: -0.7vh;
+  }
+}
+
+.item-content__title {
+  font-weight: 900;
+}
+
+.item-content__text {
+  line-height: 1.7;
+}

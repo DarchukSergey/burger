@@ -1,0 +1,168 @@
+.comments__list {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.comments__item {
+  height: 50%;
+  width: 25%;
+  position: relative;
+
+  @include tablets {
+    height: 25%;
+    width: 50%;
+  }
+}
+
+.comments-block {
+  display: none;
+  position: absolute;
+  padding: 0 8% 0.5vh 8%;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+
+  @include tablets {
+    text-align: center;
+    padding: 1vh 13% 0 13%;
+  }
+
+  @include phones {
+    padding: 0 13% 1vh 13%;
+  }
+}
+
+.comments__img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  filter: grayscale(100%);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &--active:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+  }
+
+  &--active .comments-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+
+    @include tablets {
+      align-items: center;
+      }
+  }
+
+}
+
+.comments-block--full {
+  display: none;
+  max-width: 460px;
+  width: 94%;
+
+  // height: 260px;
+  background-color: #fff;
+  color: $dark;
+  border-radius: 7px;
+  padding: 20px;
+  padding-top: 30px;
+
+  .comments-block__text {
+    display: flex;
+  }
+}
+
+.comments-block__title {
+  display: flex;
+  font-family: 'Gagalin';
+  font-size: 14px;
+  margin-bottom: 1vmin;
+
+  @include tablets {
+    margin-bottom: -0.5vh;
+  }
+
+  @include phones {
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 3vh;
+  }
+}
+
+.comments-block__text {
+  display: flex;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.53;
+  margin-bottom: -0.5vmin;
+  width: 100%;
+
+  @include tablets {
+    line-height: 1.75;
+    margin-bottom: 0.5vh;
+    min-width: 230px;
+  }
+
+  @include phones {
+    display: none;
+  }
+}
+
+.comments-block__btn {
+  display: flex;
+  @include btn($dark);
+  width: 110px;
+  padding: 1px 0;
+  text-decoration: none;
+
+  @include tablets {
+    margin-left: 1%;
+  }
+
+  @include phones {
+    display: none;
+  }
+}
+
+.comments-block__btn-mobile {
+  @include btn($dark);
+  display: none;
+
+  @include phones {
+    padding: 0px 0px;
+    display: block;
+    width: 130px;
+    text-decoration: none;
+  }
+}
+
+.fancybox-close-small {
+  top: 10px;
+  right: 10px;
+
+  &::after {
+    font-size: 35px;
+    color: $orange;
+  }
+
+  &:hover::after {
+    background-color: transparent;
+  }
+}
